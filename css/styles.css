@@ -33,6 +33,10 @@ body {
   /* display: inline-block; */
 }
 
+.item {
+  margin-right: 30px;
+}
+
 /* < !--Logo--> */
 
 .logo {
@@ -77,6 +81,10 @@ body {
   color: var(--accent-color);
 }
 
+.studio-item,
+.portfolio-item {
+  margin-right: 50px;
+}
 .studio,
 .portfolio,
 .contacts {
@@ -256,7 +264,6 @@ img {
 .member-item {
   padding-bottom: 30px;
   width: 270px;
-  margin: 0px;
 }
 
 .member-name,
