@@ -33,7 +33,7 @@ body {
   /* display: inline-block; */
 }
 
-.item {
+.item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -354,6 +354,11 @@ img {
   width: 620px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 43px;
+}
+
+.btn-item:not(:last-child) {
+  margin-right: 8.12px;
 }
 
 .button {
@@ -370,7 +375,6 @@ img {
   border: 0px;
   border-radius: 4px;
   min-width: 74.08px;
-  /* margin-right: 8.12px; */
 }
 
 /* .filter-all { 
