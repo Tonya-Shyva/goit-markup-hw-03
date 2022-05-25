@@ -30,11 +30,25 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
-  /* display: inline-block; */
 }
 
 .item:not(:last-child) {
   margin-right: 30px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+/* Страница студии */
+
+/* Шапка  */
+.top,
+.page-nav {
+  display: flex;
+  align-items: center;
 }
 
 /* < !--Logo--> */
@@ -46,7 +60,6 @@ body {
   letter-spacing: 0.03em;
   text-decoration: none;
   color: #2196f3;
-  width: 145px;
 }
 
 /* .line {
@@ -63,18 +76,17 @@ body {
   color: var(--title-text-color);
   text-decoration: none;
 }
+
 /* < !--Navigation--> */
+
 .nav-list {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  text-decoration: none;
-  margin-bottom: 32px;
-  margin-top: 32px;
   margin-right: 331px;
-  width: 294px;
 }
+
 .nav-list .studio.current,
 .nav-list .portfolio.current,
 .nav-list .contacts.current {
@@ -90,8 +102,17 @@ body {
 .contacts {
   color: var(--primary-text-color);
   text-decoration: none;
+}
+
+.nav-list,
+.connection-list {
   margin-bottom: 32px;
   margin-top: 32px;
+}
+
+.nav-list,
+.connection-list {
+  margin-left: auto;
 }
 
 .email,
@@ -101,17 +122,10 @@ body {
   font-size: 14px;
   line-height: 1.14;
   text-decoration: none;
-  margin-bottom: 32px;
-  margin-top: 32px;
 }
 
 .email {
   margin-right: 50px;
-  width: 135px;
-}
-
-.telnumber {
-  width: 122px;
 }
 
 .studio:hover,
@@ -129,14 +143,13 @@ body {
 .telnumber:focus {
   color: var(--accent-color);
 }
-/* Страница студии */
-/* Шапка  */
+
 .section {
-  /* width: 1600px; */
   padding-top: 94px;
   padding-bottom: 94px;
   margin: 0;
 }
+
 .hero {
   background-color: #2f303a;
 }
@@ -144,11 +157,6 @@ body {
 .hero .container {
   padding: 200px 252px;
   text-align: center;
-}
-h1,
-h2,
-h3 {
-  margin: 0;
 }
 
 .title-hero {
@@ -161,17 +169,12 @@ h3 {
   text-transform: uppercase;
   margin-bottom: 30px;
 }
+
 /* кнопка заказа услуги */
+
 .order-service {
-  display: inline-block;
+  display: block;
   cursor: pointer;
-  color: #ffffff;
-  background-color: var(--accent-color);
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  display: flex;
   align-items: center;
   letter-spacing: 0.06em;
   min-width: 200px;
@@ -179,10 +182,14 @@ h3 {
   padding: 10px 32px;
   border: 0px;
   border-radius: 4px;
-  vertical-align: middle;
   margin-left: auto;
   margin-right: auto;
-  /* position: absolute; */
+  color: #ffffff;
+  background-color: var(--accent-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
 }
 
 .order-service:hover {
@@ -199,17 +206,7 @@ h3 {
   display: none;
 }
 
-/* .features-list,
-.team-list {
-  column-count: 4;
-} */
-
-img {
-  display: inline-block;
-}
-
 .feature-item {
-  /* vertical-align: top; */
   width: 270px;
 }
 
@@ -233,6 +230,7 @@ img {
 }
 
 /* Чем мы занимаемся */
+
 .title {
   font-weight: 700;
   font-size: 36px;
@@ -240,14 +238,6 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 50px;
-}
-
-/* .examples-list {
-  column-count: 3;
-} */
-.example-item {
-  width: 370px;
-  /* display: inline-block; */
 }
 
 .work,
@@ -262,8 +252,12 @@ img {
 }
 
 .member-item {
+  /* width: 270px; */
+  width: calc(100%-120px / 4);
+  /* 100 %- это ширина container */
+  /* 90px - это 3 margin-right в строке (по 30px) и 30px - это 2 боковых паддинга у контейнера(по 15px) */
+  /* 4 - это кол-во элементов в строке */
   padding-bottom: 30px;
-  width: 270px;
 }
 
 .member-name,
@@ -351,14 +345,21 @@ img {
 }
 
 .filters.list {
-  width: 620px;
+  width: calc(100%-550px-30px);
+  justify-content: center;
+  /* из-за того, что я задала width не значением, а формулой (где 550- это боковой маржин а 30 это 2 боковых паддинга контейнера */
+  /* пришлось добавить свойство justify-content вместо боковых маржинов для этого списка*/
+  /* Альтернатива ширины
+   width: 620px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
+
   margin-bottom: 43px;
 }
 
 .btn-item:not(:last-child) {
   margin-right: 8.12px;
+  /* это для всех лишек, кроме последней */
 }
 
 .button {
@@ -376,24 +377,24 @@ img {
   border-radius: 4px;
   min-width: 74.08px;
 }
-
-/* .filter-all { 
+/* Альтернатива, если бы я не поставила min-width: 74.08px всем кнопкам */
+/* .filter-all {
   width: 74.08px;
-} */
+}
 
-/* .filter-websites {
+.filter-websites {
   width: 129.89px;
-} */
+}
 
-/* .filter-apps {
+.filter-apps {
   width: 147.14px;
-} */
+}
 
-/* .filter-design {
+.filter-design {
   width: 104.52px;
-} */
+}
 
-/* .filter-marketing {
+.filter-marketing {
    width: 131.91px; 
 } */
 
@@ -407,13 +408,26 @@ img {
 }
 
 .projects-list {
-  /* column-count: 3; */
+  flex-wrap: wrap;
 }
 
 .project-item {
-  width: 370px;
+  width: calc(100%-90px / 3);
+  /* 100 %- это ширина container */
+  /* 90px - это 2 margin-right в строке (по 30px) и 2 боковых паддинга у контейнера(по 15px) */
+  /* 3- это кол-во элементов в строке */
   padding-bottom: 20px;
+  margin-bottom: 30px;
 }
+
+.project-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.project-item:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
+}
+
 .project-card {
   text-decoration: none;
 }
