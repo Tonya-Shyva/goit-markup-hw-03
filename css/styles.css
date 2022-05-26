@@ -59,6 +59,11 @@ p {
   border-bottom: 1px solid #ececec;
 }
 
+.top.container {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
 .top,
 .page-nav {
   display: flex;
@@ -77,8 +82,6 @@ p {
 }
 
 .top .logo {
-  margin-top: 24px;
-  margin-bottom: 25px;
   margin-right: 93px;
 }
 
@@ -116,12 +119,6 @@ p {
 
 .nav-list,
 .connection-list {
-  margin-bottom: 32px;
-  margin-top: 32px;
-}
-
-.nav-list,
-.connection-list {
   margin-left: auto;
 }
 
@@ -155,9 +152,9 @@ p {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
   margin: 0;
+  padding-bottom: 94px;
+  padding-top: 94px;
 }
 
 .hero {
@@ -165,19 +162,22 @@ p {
 }
 
 .hero .container {
-  padding: 200px 252px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   text-align: center;
 }
 
 .title-hero {
   color: #ffffff;
-  width: 696px;
+  width: 726px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* кнопка заказа услуги */
@@ -298,7 +298,9 @@ p {
 /* Футер */
 
 .down {
-  height: 252px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -306,8 +308,6 @@ p {
 }
 
 .down .container {
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 .foot .logo-end {
@@ -317,20 +317,20 @@ p {
 .find-us {
   font-style: inherit;
   width: 231px;
+  margin-top: 20px;
 }
 
 .map-address {
   color: #ffffff;
   text-align: left;
-  margin-top: 20px;
-  margin-bottom: 0px;
 }
 
 .connection-footer-list {
-  display: contents;
-}
-.connection-item {
+  display: block;
   margin-top: 9px;
+}
+
+.connection-email-item {
   margin-bottom: 9px;
 }
 
