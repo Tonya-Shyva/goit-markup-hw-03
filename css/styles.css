@@ -17,6 +17,12 @@ body {
   background-color: var(--primary-background-color);
 }
 
+.section {
+  margin: 0;
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
 .container {
   width: 1200px;
   margin-left: auto;
@@ -57,9 +63,6 @@ p {
 
 .page-header {
   border-bottom: 1px solid #ececec;
-}
-
-.top.container {
   padding-top: 24px;
   padding-bottom: 25px;
 }
@@ -151,12 +154,6 @@ p {
   color: var(--accent-color);
 }
 
-.section {
-  margin: 0;
-  padding-bottom: 94px;
-  padding-top: 94px;
-}
-
 .hero {
   background-color: #2f303a;
 }
@@ -169,7 +166,7 @@ p {
 
 .title-hero {
   color: #ffffff;
-  width: 726px;
+  width: 696px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
